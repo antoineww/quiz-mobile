@@ -54,15 +54,15 @@ export const makeAQuizQuestion = (questionWithAnswer = {}) => {
   ensureCriticalQuestionProperties(processedQuestionWithAnswer);
 
   // Parse html characters
-  const domparser = new DOMParser();
-  const {
-    body: { textContent: parsedQuestion }
-  } = domparser.parseFromString(
-    processedQuestionWithAnswer.question,
-    "text/html"
-  );
+  // const domparser = new DOMParser();
+  // const {
+  //   body: { textContent: parsedQuestion }
+  // } = domparser.parseFromString(
+  //   processedQuestionWithAnswer.question,
+  //   "text/html"
+  // );
 
-  processedQuestionWithAnswer.question = parsedQuestion;
+  // processedQuestionWithAnswer.question = parsedQuestion;
 
   return processedQuestionWithAnswer;
 };

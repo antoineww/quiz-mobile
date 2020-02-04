@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 import { getQuizProgess } from "../../../helpers/common";
 import { BooleanButtonsSection } from "./booleanButtonsSection";
 import { QuizNotFound } from "./quizNotFound";

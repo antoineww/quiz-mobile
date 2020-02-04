@@ -16,7 +16,7 @@ const ScreenRouter = (props = {}) => {
 
   /* eslint-disable react-hooks/exhaustive-deps */
 
-  // onClick Begin Button - copy fresh questions for quiz
+  // onPress Begin Button - copy fresh questions for quiz
   useEffect(() => {
     canPrepareQuestionsForNewQuiz(stateQuiz, setStateQuiz, props);
   }, [startNew]);

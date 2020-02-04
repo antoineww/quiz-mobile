@@ -12,7 +12,7 @@ const root = combineReducers({
 });
 
 // TODO: For debugging purposes
-const enabled = false;
+const enabled = true;
 const logger = createLogger({
   predicate: (getState, action) => enabled
 });

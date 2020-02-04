@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
 import strings from "./../../resources/strings";
 
@@ -18,12 +19,12 @@ const Quiz = (props = {}) => {
     <View className="container quiz">
       <QuizContent {...props} />
       <View className="footer">
-        <button
+        <TouchableOpacity
           className="btn btn-exit"
-          onClick={() => quitQuiz(stateQuiz, setStateQuiz)}
+          onPress={() => quitQuiz(stateQuiz, setStateQuiz)}
         >
           {strings.quiz_quit}
-        </button>
+        </TouchableOpacity>
       </View>
     </View>
   );

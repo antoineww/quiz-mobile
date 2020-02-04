@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 import strings from "./../resources/strings";
 import { FaPlus, FaMinus, FaCircle } from "react-icons/fa";
 import { getQuizScore } from "./../helpers/common";
@@ -52,15 +53,15 @@ const Results = (props = {}) => {
       <View className="footer">
         <TouchableOpacity
           className="btn"
-          onClick={() => beginQuiz(setStateQuiz)}
+          onPress={() => beginQuiz(setStateQuiz)}
         >
-          {strings.results_try_again}
+          <Text>{strings.results_try_again}</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="btn btn-exit"
-          onClick={() => exitQuiz(setStateQuiz)}
+          onPress={() => exitQuiz(setStateQuiz)}
         >
-          {strings.results_play_again}
+          <Text>{strings.results_play_again}</Text>
         </TouchableOpacity>
       </View>
     </View>

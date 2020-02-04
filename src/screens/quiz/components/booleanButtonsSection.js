@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 import strings from "./../../../resources/strings";
 import { ANSWER_TYPES } from "./../../../resources/constants";
 import { applyAnswer } from "./../helpers";
@@ -26,21 +27,21 @@ export const BooleanButtonsSection = ({
       );
 
     const trueButton = (
-      <button
+      <TouchableOpacity
         className="btn btn-true"
-        onClick={() => answerQuestion(ANSWER_TYPES.boolean.True)}
+        onPress={() => answerQuestion(ANSWER_TYPES.boolean.True)}
       >
         {strings.quiz_true}
-      </button>
+      </TouchableOpacity>
     );
 
     const falseButton = (
-      <button
+      <TouchableOpacity
         className="btn btn-false"
-        onClick={() => answerQuestion(ANSWER_TYPES.boolean.False)}
+        onPress={() => answerQuestion(ANSWER_TYPES.boolean.False)}
       >
         {strings.quiz_false}
-      </button>
+      </TouchableOpacity>
     );
 
     section = (
