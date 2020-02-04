@@ -3,7 +3,7 @@ import { FaBroadcastTower } from "react-icons/fa";
 import strings from "./../../../resources/strings";
 
 export const QuizNotFound = () => (
-  <div className="quiz-not-found">
-    <FaBroadcastTower /> <h2>{strings.quiz_not_found}</h2>
-  </div>
+  <View className="quiz-not-found">
+    <FaBroadcastTower /> <Text>{strings.quiz_not_found}</Text>
+  </View>
 );

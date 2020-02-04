@@ -31,13 +31,13 @@ export const QuizContent = (props = {}) => {
   );
 
   return (
-    <div className="quiz-content">
-      <h1>{currentQuestion.category}</h1>
-      <div className="box">
-        <h2 className="question">{currentQuestion.question}</h2>
+    <View className="quiz-content">
+      <Text>{currentQuestion.category}</Text>
+      <View className="box">
+        <Text className="question">{currentQuestion.question}</Text>
         {booleanButtonsSection}
-      </div>
-      <p>{quizProgress}</p>
-    </div>
+      </View>
+      <Text>{quizProgress}</Text>
+    </View>
   );
 };

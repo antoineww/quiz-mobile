@@ -33,31 +33,37 @@ const Results = (props = {}) => {
   const { fraction, percentage } = getQuizScore(questionsWithAnswers);
   const header = percentage ? `${strings.results_header} ${percentage} %` : "";
   const resultItems = questionsWithAnswers.map((questionWithAnswer, index) => (
-    <li
+    <View
       key={`resultItem${index}`}
       className={`listItem ${getScoreClass(questionWithAnswer.is_correct)}`}
     >
-      <div className="resultIcon">
+      <View className="resultIcon">
         {getScoreSymbol(questionWithAnswer.is_correct)}
-      </div>
-      <div className="resultAnswer">{questionWithAnswer.question}</div>
-    </li>
+      </View>
+      <View className="resultAnswer">{questionWithAnswer.question}</View>
+    </View>
   ));
 
   return (
-    <div className="container results">
-      <h1>{header}</h1>
-      <h1>{fraction}</h1>
-      <ul id="list">{resultItems}</ul>
-      <div className="footer">
-        <button className="btn" onClick={() => beginQuiz(setStateQuiz)}>
+    <View className="container results">
+      <Text>{header}</Text>
+      <Text>{fraction}</Text>
+      <View id="list">{resultItems}</View>
+      <View className="footer">
+        <TouchableOpacity
+          className="btn"
+          onClick={() => beginQuiz(setStateQuiz)}
+        >
           {strings.results_try_again}
-        </button>
-        <button className="btn btn-exit" onClick={() => exitQuiz(setStateQuiz)}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="btn btn-exit"
+          onClick={() => exitQuiz(setStateQuiz)}
+        >
           {strings.results_play_again}
-        </button>
-      </div>
-    </div>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 

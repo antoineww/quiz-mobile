@@ -44,9 +44,9 @@ export const BooleanButtonsSection = ({
     );
 
     section = (
-      <div className="boolean-buttons-section">
+      <View className="boolean-buttons-section">
         {trueButton} {falseButton}
-      </div>
+      </View>
     );
   }
 

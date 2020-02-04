@@ -15,17 +15,17 @@ const Quiz = (props = {}) => {
   /* eslint-enable */
 
   return (
-    <div className="container quiz">
+    <View className="container quiz">
       <QuizContent {...props} />
-      <div className="footer">
+      <View className="footer">
         <button
           className="btn btn-exit"
           onClick={() => quitQuiz(stateQuiz, setStateQuiz)}
         >
           {strings.quiz_quit}
         </button>
-      </div>
-    </div>
+      </View>
+    </View>
   );
 };
 
