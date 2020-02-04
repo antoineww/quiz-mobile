@@ -1,14 +1,18 @@
-import React from "react";
-import Home from "./screens/home";
-import { store } from "./redux";
+import React, { Component } from "react";
+import Routes from "./src/routes/index";
+
+import "./App.css";
+import { store } from "./src/redux";
 import { Provider } from "react-redux";
 
-export default class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Home />
+        <Routes />
       </Provider>
     );
   }
 }
+
+export default App;
