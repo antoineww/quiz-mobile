@@ -1,3 +1,4 @@
+import { XmlEntities } from "html-entities";
 import { DEFAULT_QUESTION_WITH_ANSWER } from "./../resources/constants";
 
 export const getQuizProgess = (
@@ -54,15 +55,9 @@ export const makeAQuizQuestion = (questionWithAnswer = {}) => {
   ensureCriticalQuestionProperties(processedQuestionWithAnswer);
 
   // Parse html characters
-  // const domparser = new DOMParser();
-  // const {
-  //   body: { textContent: parsedQuestion }
-  // } = domparser.parseFromString(
-  //   processedQuestionWithAnswer.question,
-  //   "text/html"
-  // );
-
-  // processedQuestionWithAnswer.question = parsedQuestion;
+  const entities = new XmlEntities();
+  const parsedQuestion = entities.decode(processedQuestionWithAnswer.question);
+  processedQuestionWithAnswer.question = parsedQuestion;
 
   return processedQuestionWithAnswer;
 };
