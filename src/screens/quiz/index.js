@@ -23,7 +23,7 @@ const Quiz = (props = {}) => {
           className="btn btn-exit"
           onPress={() => quitQuiz(stateQuiz, setStateQuiz)}
         >
-          {strings.quiz_quit}
+          <Text>{strings.quiz_quit}</Text>
         </TouchableOpacity>
       </View>
     </View>

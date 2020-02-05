@@ -1,18 +1,19 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import strings from "./../resources/strings";
-import { FaPlus, FaMinus, FaCircle } from "react-icons/fa";
+import Icon from "react-native-vector-icons/FontAwesome5";
+
 import { getQuizScore } from "./../helpers/common";
 import { beginQuiz, exitQuiz } from "../helpers/navigationHooks";
 
 const getScoreSymbol = is_correct => {
   switch (is_correct) {
     case true:
-      return <FaPlus />;
+      return <Icon name="plus" />;
     case false:
-      return <FaMinus />;
+      return <Icon name="minus" />;
     default:
-      return <FaCircle />;
+      return <Icon name="circle" />;
   }
 };
 
@@ -41,7 +42,7 @@ const Results = (props = {}) => {
       <View className="resultIcon">
         {getScoreSymbol(questionWithAnswer.is_correct)}
       </View>
-      <View className="resultAnswer">{questionWithAnswer.question}</View>
+      <Text className="resultAnswer">{questionWithAnswer.question}</Text>
     </View>
   ));
 

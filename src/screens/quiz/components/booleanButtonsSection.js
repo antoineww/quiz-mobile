@@ -31,7 +31,7 @@ export const BooleanButtonsSection = ({
         className="btn btn-true"
         onPress={() => answerQuestion(ANSWER_TYPES.boolean.True)}
       >
-        {strings.quiz_true}
+        <Text>{strings.quiz_true}</Text>
       </TouchableOpacity>
     );
 
@@ -40,13 +40,14 @@ export const BooleanButtonsSection = ({
         className="btn btn-false"
         onPress={() => answerQuestion(ANSWER_TYPES.boolean.False)}
       >
-        {strings.quiz_false}
+        <Text>{strings.quiz_false}</Text>
       </TouchableOpacity>
     );
 
     section = (
       <View className="boolean-buttons-section">
-        {trueButton} {falseButton}
+        {trueButton}
+        {falseButton}
       </View>
     );
   }
