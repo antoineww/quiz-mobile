@@ -1,12 +1,18 @@
 import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import actions from "./../redux/actions";
 import ScreenRouter from "./screenRouter";
+import globalStyles from "../globalStyles";
 
 const Routes = (props = {}) => {
-  return <ScreenRouter {...props} />;
+  return (
+    <View style={globalStyles.root}>
+      <ScreenRouter {...props} />
+    </View>
+  );
 };
 
 export default connect(
