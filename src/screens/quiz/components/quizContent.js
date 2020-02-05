@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text } from "react-native";
 import { getQuizProgess } from "../../../helpers/common";
 import { BooleanButtonsSection } from "./booleanButtonsSection";
 import { QuizNotFound } from "./quizNotFound";
+import globalStyles from "../../../globalStyles";
 
 export const QuizContent = (props = {}) => {
   const { stateQuiz, setStateQuiz } = props;
@@ -32,13 +33,27 @@ export const QuizContent = (props = {}) => {
   );
 
   return (
-    <View className="quiz-content">
-      <Text>{currentQuestion.category}</Text>
-      <View className="box">
-        <Text className="question">{currentQuestion.question}</Text>
+    <View style={globalStyles.quizContent}>
+      <Text
+        style={[globalStyles.textHeader, { color: globalStyles.text2.color }]}
+      >
+        {currentQuestion.category}
+      </Text>
+      <View style={globalStyles.box}>
+        <Text
+          style={[
+            globalStyles.textHeader,
+            globalStyles.textQuestion,
+            { color: globalStyles.text2.color }
+          ]}
+        >
+          {currentQuestion.question}
+        </Text>
         {booleanButtonsSection}
       </View>
-      <Text>{quizProgress}</Text>
+      <Text style={[globalStyles.text2, globalStyles.textProgress]}>
+        {quizProgress}
+      </Text>
     </View>
   );
 };

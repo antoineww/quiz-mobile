@@ -18,6 +18,15 @@ const btn = {
   borderRadius: 300
 };
 
+const answerButton = {
+  borderRadius: 5,
+
+  paddingTop: Math.round(height * 0.05),
+  paddingBottom: Math.round(height * 0.05),
+  paddingLeft: Math.round(width * 0.1),
+  paddingRight: Math.round(width * 0.1)
+};
+
 export const btnStyles = {
   btn,
 
@@ -30,30 +39,22 @@ export const btnStyles = {
 
   btnTrue: {
     ...btn,
-    backgroundColor: colorScheme.buttonTrue,
-    borderRadius: 5
-
-    // paddingTop: 5vh ,
-    // paddingBottom: 5vh ,
-    // paddingLeft: 10vw,
-    // paddingRight: 10vw,
+    ...answerButton,
+    backgroundColor: colorScheme.buttonTrue
   },
 
   btnFalse: {
     ...btn,
-    backgroundColor: colorScheme.buttonFalse,
-    borderRadius: 5
-
-    // paddingTop: 5vh ,
-    // paddingBottom: 5vh ,
-    // paddingLeft: 10vw,
-    // paddingRight: 10vw,
+    ...answerButton,
+    backgroundColor: colorScheme.buttonFalse
   },
 
   btnExit: {
     ...btn,
-    color: colorScheme.buttonPrimary,
-    backgroundColor: colorScheme.primary
+    backgroundColor: colorScheme.primary,
+
+    paddingTop: 5,
+    paddingBottom: 5
   }
 };
 

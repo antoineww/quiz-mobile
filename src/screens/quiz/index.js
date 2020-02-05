@@ -6,6 +6,7 @@ import strings from "./../../resources/strings";
 import { onQuestionAnswered } from "./helpers";
 import { quitQuiz } from "../../helpers/navigationHooks";
 import { QuizContent } from "./components";
+import globalStyles from "../../globalStyles";
 
 const Quiz = (props = {}) => {
   const { stateQuiz, setStateQuiz } = props;
@@ -16,14 +17,14 @@ const Quiz = (props = {}) => {
   /* eslint-enable */
 
   return (
-    <View className="container quiz">
+    <View style={[globalStyles.container, globalStyles.quiz]}>
       <QuizContent {...props} />
-      <View className="footer">
+      <View style={globalStyles.footer}>
         <TouchableOpacity
-          className="btn btn-exit"
+          style={[globalStyles.btn, globalStyles.btnExit]}
           onPress={() => quitQuiz(stateQuiz, setStateQuiz)}
         >
-          <Text>{strings.quiz_quit}</Text>
+          <Text style={[globalStyles.textBtnExit]}>{strings.quiz_quit}</Text>
         </TouchableOpacity>
       </View>
     </View>

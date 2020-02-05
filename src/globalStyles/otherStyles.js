@@ -11,14 +11,6 @@ export const styles = {
     justifyContent: "center",
     textAlign: "center"
   },
-
-  home: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "center"
-  },
-
   loaderLogo: {
     // animation: App-logo-spin infinite 5s linear,
     // height: 4vmin,
@@ -33,9 +25,8 @@ export const styles = {
   appLogo: {
     fontSize: Math.round(width * 0.5)
   },
-
-  AppLink: {
-    color: colorScheme.buttonPrimary
+  quizNotFoundIcon: {
+    fontSize: Math.round(width * 0.2)
   },
 
   AppHeader: {
@@ -44,6 +35,29 @@ export const styles = {
     color: colorScheme.secondary,
     fontWeight: "bold"
   },
+
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    paddingBottom: Math.round(height * 0.03)
+  },
+
+  home: {
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center"
+  },
+
+  quiz: {
+    backgroundColor: colorScheme.secondary,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: Math.round(width * 0.05),
+    marginRight: Math.round(width * 0.05),
+    minWidth: Math.round(width * 0.9),
+    maxWidth: Math.round(width * 0.9)
+  },
+
   results: {
     flex: 1,
     backgroundColor: colorScheme.primary,
@@ -51,27 +65,12 @@ export const styles = {
     fontWeight: "bold"
   },
 
-  container: {
-    flex: 1,
-    flexDirection: "column"
-    // "padding-bottom": 5vh,
-  },
-
-  quiz: {
-    backgroundColor: colorScheme.secondary,
-    marginTop: 0,
-    marginBottom: 0
-    // marginLeft: 10vw,
-    // marginRight: 10vw,
-    // min-width: 80vw,
-    // max-width: 80vw,
-  },
-
   quizContent: {
     flex: 1,
     flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
+    marginTop: Math.round(height * 0.05)
+    // justifyContent: "center",
+    // alignItems: "center"
   },
 
   quizNotFound: {
@@ -84,7 +83,8 @@ export const styles = {
   box: {
     flex: 1,
     flexDirection: "column",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    marginTop: Math.round(height * 0.1)
   },
 
   question: {
@@ -92,6 +92,11 @@ export const styles = {
     marginBottom: 0
     // marginLeft: 1vw,
     // marginRight: 1vw,
+  },
+
+  booleanButtonsSection: {
+    flexDirection: "row",
+    justifyContent: "space-around"
   },
 
   footer: {

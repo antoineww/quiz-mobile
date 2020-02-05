@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import strings from "./../../../resources/strings";
 import { ANSWER_TYPES } from "./../../../resources/constants";
 import { applyAnswer } from "./../helpers";
+import globalStyles from "../../../globalStyles";
 
 export const BooleanButtonsSection = ({
   stateQuiz,
@@ -28,24 +29,24 @@ export const BooleanButtonsSection = ({
 
     const trueButton = (
       <TouchableOpacity
-        className="btn btn-true"
+        style={globalStyles.btnTrue}
         onPress={() => answerQuestion(ANSWER_TYPES.boolean.True)}
       >
-        <Text>{strings.quiz_true}</Text>
+        <Text style={globalStyles.textBtn}>{strings.quiz_true}</Text>
       </TouchableOpacity>
     );
 
     const falseButton = (
       <TouchableOpacity
-        className="btn btn-false"
+        style={globalStyles.btnFalse}
         onPress={() => answerQuestion(ANSWER_TYPES.boolean.False)}
       >
-        <Text>{strings.quiz_false}</Text>
+        <Text style={globalStyles.textBtn}>{strings.quiz_false}</Text>
       </TouchableOpacity>
     );
 
     section = (
-      <View className="boolean-buttons-section">
+      <View style={globalStyles.booleanButtonsSection}>
         {trueButton}
         {falseButton}
       </View>

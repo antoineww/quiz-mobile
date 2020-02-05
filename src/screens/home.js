@@ -49,7 +49,7 @@ const Home = (props = {}) => {
   } = props;
 
   return (
-    <View style={globalStyles.home}>
+    <View style={[globalStyles.container, globalStyles.home]}>
       <Text style={globalStyles.textHeader}>{strings.home_header}</Text>
       <LoaderIcon duration={20000} style={globalStyles.appLogo} />
       <View>
