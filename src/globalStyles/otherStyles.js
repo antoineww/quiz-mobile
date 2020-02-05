@@ -1,14 +1,8 @@
-import { StyleSheet } from "react-native";
+import colorScheme from "./colorScheme";
+import textStyles from "./text";
+import buttonStyles from "./button";
 
-export const colorScheme = {
-  primary: "#282c34",
-  secondary: "#ffffff",
-  buttonPrimary: "#61dafb",
-  buttonTrue: "#cdfb61",
-  buttonFalse: "#fbc261"
-};
-
-export const styles = StyleSheet.create({
+export const styles = {
   root: {
     flex: 1,
     backgroundColor: colorScheme.primary,
@@ -16,9 +10,13 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center"
+  },
 
-    // min-height: 100vh,
-    // fontSize: calc(10px + 2vmin),
+  home: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center"
   },
 
   App: {
@@ -126,66 +124,13 @@ export const styles = StyleSheet.create({
     // min-width: 8vw,
   },
 
-  btn: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-
-    textAlign: "center",
-
-    fontWeight: 500,
-    // fontSize: 15em,
-    fontWeight: "bold",
-
-    color: colorScheme.primary,
-
-    // paddingTop: 3vh ,
-    // paddingBottom: 5vh ,
-    // paddingLeft: 3vh,
-    // paddingRight: 5vh,
-
-    backgroundColor: colorScheme.buttonPrimary,
-    borderRadius: 300
-  },
-
-  btnLoading: {
-    borderColor: colorScheme.buttonPrimary,
-    backgroundColor: colorScheme.primary,
-    color: colorScheme.buttonPrimary
-  },
-
-  btnTrue: {
-    backgroundColor: colorScheme.buttonTrue,
-    borderRadius: 5
-
-    // paddingTop: 5vh ,
-    // paddingBottom: 5vh ,
-    // paddingLeft: 10vw,
-    // paddingRight: 10vw,
-  },
-
-  btnFalse: {
-    backgroundColor: colorScheme.buttonFalse,
-    borderRadius: 5
-
-    // paddingTop: 5vh ,
-    // paddingBottom: 5vh ,
-    // paddingLeft: 10vw,
-    // paddingRight: 10vw,
-  },
-
   resultTrue: {
     color: colorScheme.buttonTrue
   },
 
   resultFalse: {
     color: colorScheme.buttonFalse
-  },
-
-  btnExit: {
-    color: colorScheme.buttonPrimary,
-    backgroundColor: colorScheme.primary
   }
-});
+};
 
 export default styles;
