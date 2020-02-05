@@ -19,6 +19,7 @@ const textBtn = {
 
 export const textStyles = {
   text,
+  textBtn,
   textSubHeader: {
     ...text,
     fontSize: 14 + textRatioIncrease
@@ -27,6 +28,7 @@ export const textStyles = {
     ...text,
     fontSize: 20 + textRatioIncrease
   },
+
   textBtnLoading: {
     ...textBtn,
     color: colorScheme.buttonPrimary

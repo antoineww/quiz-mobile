@@ -1,6 +1,6 @@
 import colorScheme from "./colorScheme";
-import textStyles from "./text";
-import buttonStyles from "./button";
+import { Dimensions } from "react-native";
+const { height, width } = Dimensions.get("window"); // Only use here in a fixed Orientation
 
 export const styles = {
   root: {
@@ -19,21 +19,19 @@ export const styles = {
     alignItems: "center"
   },
 
-  App: {
-    textAlign: "center"
-  },
-
-  AppLogo: {
-    //   animation: App-logo-spin infinite 20s linear,
-    //   height: 40vmin,
-    //   pointer-events: none,
-  },
-
   loaderLogo: {
     // animation: App-logo-spin infinite 5s linear,
     // height: 4vmin,
     // pointer-events: none,
-    color: colorScheme.primary
+    fontSize: Math.round(width * 0.1),
+    color: colorScheme.buttonPrimary,
+
+    paddingLeft: Math.round(width * 0.02),
+    paddingRight: Math.round(width * 0.02)
+  },
+
+  appLogo: {
+    fontSize: Math.round(width * 0.5)
   },
 
   AppLink: {
