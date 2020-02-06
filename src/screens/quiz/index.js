@@ -21,10 +21,23 @@ const Quiz = (props = {}) => {
       <QuizContent {...props} />
       <View style={globalStyles.footer}>
         <TouchableOpacity
-          style={[globalStyles.btn, globalStyles.btnExit]}
+          style={[
+            globalStyles.btn,
+            globalStyles.btnExit,
+            ,
+            globalStyles.btnSlim,
+            { borderWidth: 0 }
+          ]}
           onPress={() => quitQuiz(stateQuiz, setStateQuiz)}
         >
-          <Text style={[globalStyles.textBtnExit]}>{strings.quiz_quit}</Text>
+          <Text
+            style={[
+              globalStyles.textBtnExit,
+              { fontSize: globalStyles.text.fontSize }
+            ]}
+          >
+            {strings.quiz_quit}
+          </Text>
         </TouchableOpacity>
       </View>
     </View>

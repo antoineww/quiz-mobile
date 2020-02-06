@@ -39,7 +39,7 @@ export const styles = {
   container: {
     flex: 1,
     flexDirection: "column",
-    paddingBottom: Math.round(height * 0.03)
+    paddingBottom: Math.round(height * 0.02)
   },
 
   home: {
@@ -59,16 +59,16 @@ export const styles = {
   },
 
   results: {
-    flex: 1,
     backgroundColor: colorScheme.primary,
-    color: colorScheme.secondary,
-    fontWeight: "bold"
+    marginTop: Math.round(height * 0.05),
+    marginLeft: Math.round(width * 0.05),
+    marginRight: Math.round(width * 0.05)
   },
 
   quizContent: {
     flex: 1,
     flexDirection: "column",
-    marginTop: Math.round(height * 0.05)
+    paddingTop: Math.round(height * 0.05)
     // justifyContent: "center",
     // alignItems: "center"
   },
@@ -118,13 +118,9 @@ export const styles = {
     // fontSize: calc(18px + 2vmin),
   },
 
-  resultsListItem: {
-    textAlign: "left",
-    flexDirection: "row"
-  },
-
   resultIcon: {
-    // min-width: 8vw,
+    // minWidth: Math.round(width * 0.2),
+    alignItems: "center"
   },
 
   resultTrue: {
@@ -133,6 +129,15 @@ export const styles = {
 
   resultFalse: {
     color: colorScheme.buttonFalse
+  },
+  resultItems: {
+    minHeight: Math.round(height * 0.8),
+    maxHeight: Math.round(height * 0.8)
+  },
+  resultFooter: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    paddingTop: Math.round(height * 0.01)
   }
 };
 

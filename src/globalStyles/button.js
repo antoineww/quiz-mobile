@@ -51,8 +51,11 @@ export const btnStyles = {
 
   btnExit: {
     ...btn,
-    backgroundColor: colorScheme.primary,
-
+    borderWidth: 1,
+    borderColor: colorScheme.buttonPrimary,
+    backgroundColor: colorScheme.primary
+  },
+  btnSlim: {
     paddingTop: 5,
     paddingBottom: 5
   }

@@ -53,6 +53,15 @@ export const textStyles = {
     ...textBtn,
     fontSize: Math.round(text.fontSize * 1.5),
     color: colorScheme.buttonPrimary
+  },
+  textResultsListItem: {
+    ...text,
+    textAlign: "left",
+
+    marginTop: Math.round(height * 0.01),
+    marginBottom: Math.round(height * 0.01),
+    marginLeft: Math.round(width * 0.05),
+    marginRight: Math.round(width * 0.05)
   }
 };
 
