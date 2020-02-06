@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 
 import strings from "./../../resources/strings";
 
@@ -16,6 +16,17 @@ const Quiz = (props = {}) => {
   useEffect(() => onQuestionAnswered(stateQuiz, setStateQuiz), [goToQuestion]);
   /* eslint-enable */
 
+  const onQuit = () =>
+    Alert.alert(
+      "Wait",
+      "Do you want to quit doing the quiz?",
+      [
+        { text: "YES", onPress: () => quitQuiz(stateQuiz, setStateQuiz) },
+        { text: "NO", onPress: () => {} }
+      ],
+      { cancelable: false }
+    );
+
   return (
     <View style={[globalStyles.container, globalStyles.quiz]}>
       <QuizContent {...props} />
@@ -28,7 +39,7 @@ const Quiz = (props = {}) => {
             globalStyles.btnSlim,
             { borderWidth: 0 }
           ]}
-          onPress={() => quitQuiz(stateQuiz, setStateQuiz)}
+          onPress={onQuit}
         >
           <Text
             style={[
