@@ -1,44 +1,44 @@
-import { getQuestions } from "./../../data/api";
-import constants from "./../constants";
+import { getQuestions } from "./../../data/api"
+import constants from "./../constants"
 
 export const getQuestionsAction = (params = {}) => {
   return async (dispatch, getState) => {
     const {
-      progress: { gettingQuestions }
-    } = getState();
-    if (gettingQuestions) return;
+      progress: { gettingQuestions },
+    } = getState()
+    if (gettingQuestions) return
 
     dispatch({
-      type: constants.GET_QUESTIONS_START
-    });
+      type: constants.GET_QUESTIONS_START,
+    })
 
     try {
-      const { cb } = params;
-      const response = await getQuestions();
-      const { data, status } = response;
+      const { cb } = params
+      const response = await getQuestions()
+      const { data, status } = response
       if (status) {
-        const { results: questions } = data;
+        const { results: questions } = data
         if (Array.isArray(questions)) {
           dispatch({
             type: constants.GET_QUESTIONS,
-            questions
-          });
+            questions,
+          })
         }
       }
 
       dispatch({
         type: constants.GET_QUESTIONS_END,
-        status
-      });
+        status,
+      })
 
-      cb();
+      cb()
     } catch (err) {
       dispatch({
         type: constants.GET_QUESTIONS_END,
-        err
-      });
+        err,
+      })
     }
-  };
-};
+  }
+}
 
-export default { getQuestionsAction };
+export default { getQuestionsAction }

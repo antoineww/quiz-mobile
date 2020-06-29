@@ -1,63 +1,63 @@
-import { XmlEntities } from "html-entities";
-import { DEFAULT_QUESTION_WITH_ANSWER } from "./../resources/constants";
+import { XmlEntities } from "html-entities"
+import { DEFAULT_QUESTION_WITH_ANSWER } from "./../resources/constants"
 
 export const getQuizProgess = (
   questionCurrentIndex = -1,
   questionsWithAnswers = []
-) => `${questionCurrentIndex + 1} of ${questionsWithAnswers.length}`;
+) => `${questionCurrentIndex + 1} of ${questionsWithAnswers.length}`
 
 export const getQuizScore = (questionsWithAnswers = []) => {
   const numerator = questionsWithAnswers.filter(
-    question => question.is_correct === true
-  ).length;
-  const denominator = questionsWithAnswers.length;
+    (question) => question.is_correct === true
+  ).length
+  const denominator = questionsWithAnswers.length
 
-  let percentage = 0;
+  let percentage = 0
   if (numerator > 0 && denominator > 0)
-    percentage = Math.round((numerator / denominator) * 100);
+    percentage = Math.round((numerator / denominator) * 100)
 
   return {
     fraction: `${numerator} / ${denominator}`,
-    percentage
-  };
-};
+    percentage,
+  }
+}
 
 export const ensureCriticalQuestionProperties = (
   possibleQuestionWithAnswer = {}
 ) => {
-  const questionWithAnswer = { ...possibleQuestionWithAnswer };
+  const questionWithAnswer = { ...possibleQuestionWithAnswer }
 
   questionWithAnswer.attempted_answer =
-    DEFAULT_QUESTION_WITH_ANSWER.attempted_answer;
+    DEFAULT_QUESTION_WITH_ANSWER.attempted_answer
 
-  questionWithAnswer.is_correct = DEFAULT_QUESTION_WITH_ANSWER.is_correct;
+  questionWithAnswer.is_correct = DEFAULT_QUESTION_WITH_ANSWER.is_correct
 
   if (
     typeof questionWithAnswer.correct_answer !== "string" ||
     !Array.isArray(questionWithAnswer.incorrect_answers)
   ) {
     questionWithAnswer.correct_answer =
-      DEFAULT_QUESTION_WITH_ANSWER.correct_answer;
+      DEFAULT_QUESTION_WITH_ANSWER.correct_answer
 
     questionWithAnswer.incorrect_answers =
-      DEFAULT_QUESTION_WITH_ANSWER.incorrect_answers;
+      DEFAULT_QUESTION_WITH_ANSWER.incorrect_answers
   }
 
-  return questionWithAnswer;
-};
+  return questionWithAnswer
+}
 
 export const makeAQuizQuestion = (questionWithAnswer = {}) => {
   const processedQuestionWithAnswer = {
     ...DEFAULT_QUESTION_WITH_ANSWER,
-    ...questionWithAnswer
-  };
+    ...questionWithAnswer,
+  }
 
-  ensureCriticalQuestionProperties(processedQuestionWithAnswer);
+  ensureCriticalQuestionProperties(processedQuestionWithAnswer)
 
   // Parse html characters
-  const entities = new XmlEntities();
-  const parsedQuestion = entities.decode(processedQuestionWithAnswer.question);
-  processedQuestionWithAnswer.question = parsedQuestion;
+  const entities = new XmlEntities()
+  const parsedQuestion = entities.decode(processedQuestionWithAnswer.question)
+  processedQuestionWithAnswer.question = parsedQuestion
 
-  return processedQuestionWithAnswer;
-};
+  return processedQuestionWithAnswer
+}

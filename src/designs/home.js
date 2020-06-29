@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import styles from "./styles";
+import React from "react"
+import { View, Text, TouchableOpacity } from "react-native"
+import styles from "./styles"
 
 const home = () => (
   <View style={styles.container}>
@@ -11,6 +11,6 @@ const home = () => (
       <Text>BEGIN</Text>
     </TouchableOpacity>
   </View>
-);
+)
 
-export default home;
+export default home

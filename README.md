@@ -11,18 +11,25 @@ Your challenge is to create a 10 question, true or false, trivia app in React Na
 In the project directory, you can run:
 
 ### To Install
- ```
- yarn
- ```
+
+```
+yarn
+```
+
 ### Start Server
- ```
- yarn start
- ```
-### Run Android 
- ```
- yarn android
- ```
-### Run IOS 
- ```
- yarn ios
- ```
+
+```
+yarn start
+```
+
+### Run Android
+
+```
+yarn android
+```
+
+### Run IOS
+
+```
+yarn ios
+```

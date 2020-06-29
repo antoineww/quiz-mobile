@@ -1,8 +1,8 @@
 export const QUIZ_STAGES = {
   HOME: "HOME",
   IN_QUIZ: "IN_QUIZ",
-  RESULTS: "RESULTS"
-};
+  RESULTS: "RESULTS",
+}
 
 export const DEFAULT_QUESTION_WITH_ANSWER = {
   category: "TOPIC: UNKNOWN",
@@ -12,15 +12,15 @@ export const DEFAULT_QUESTION_WITH_ANSWER = {
   incorrect_answers: ["False"],
 
   attempted_answer: null,
-  is_correct: null
-};
+  is_correct: null,
+}
 
 export const ANSWER_TYPES = {
   boolean: {
     True: "True",
-    False: "False"
-  }
-};
+    False: "False",
+  },
+}
 
 export const DEFAULT_STATE_QUIZ = {
   stage: QUIZ_STAGES.HOME,
@@ -32,5 +32,5 @@ export const DEFAULT_STATE_QUIZ = {
 
   startNew: false,
   getFreshQuestions: false,
-  autoStart: false
-};
+  autoStart: false,
+}

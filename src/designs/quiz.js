@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import styles from "./styles";
+import React from "react"
+import { View, Text, TouchableOpacity } from "react-native"
+import styles from "./styles"
 
 const quiz = () => (
   <View style={styles.container}>
@@ -16,6 +16,6 @@ const quiz = () => (
       <Text>False</Text>
     </TouchableOpacity>
   </View>
-);
+)
 
-export default quiz;
+export default quiz

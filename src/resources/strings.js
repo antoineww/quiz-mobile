@@ -13,5 +13,5 @@ export default {
 
   results_header: "You scored",
   results_try_again: "TRY AGAIN?",
-  results_play_again: "PLAY AGAIN?"
-};
+  results_play_again: "PLAY AGAIN?",
+}

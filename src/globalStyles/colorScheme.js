@@ -4,7 +4,7 @@ export const colorScheme = {
   secondary: "#ffffff",
   buttonPrimary: "#61dafb",
   buttonTrue: "#cdfb61",
-  buttonFalse: "#fbc261"
-};
+  buttonFalse: "#fbc261",
+}
 
-export default colorScheme;
+export default colorScheme

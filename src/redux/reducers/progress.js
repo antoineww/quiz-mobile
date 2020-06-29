@@ -1,26 +1,26 @@
-import constants from "../constants";
+import constants from "../constants"
 export const initialState = {
-  gettingQuestions: false
-};
+  gettingQuestions: false,
+}
 
 const progress = (state = initialState, action = {}) => {
   switch (action.type) {
     case constants.GET_QUESTIONS_START:
       return {
         ...state,
-        gettingQuestions: true
-      };
+        gettingQuestions: true,
+      }
     case constants.GET_QUESTIONS_END:
       return {
         ...state,
-        gettingQuestions: false
-      };
+        gettingQuestions: false,
+      }
 
     default:
       return {
-        ...state
-      };
+        ...state,
+      }
   }
-};
+}
 
-export default progress;
+export default progress

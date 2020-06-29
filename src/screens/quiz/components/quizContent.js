@@ -1,19 +1,19 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { getQuizProgess } from "../../../helpers/common";
-import { BooleanButtonsSection } from "./booleanButtonsSection";
-import { QuizNotFound } from "./quizNotFound";
-import globalStyles from "../../../globalStyles";
+import React from "react"
+import { View, Text } from "react-native"
+import { getQuizProgess } from "../../../helpers/common"
+import { BooleanButtonsSection } from "./booleanButtonsSection"
+import { QuizNotFound } from "./quizNotFound"
+import globalStyles from "../../../globalStyles"
 
 export const QuizContent = (props = {}) => {
-  const { stateQuiz, setStateQuiz } = props;
+  const { stateQuiz, setStateQuiz } = props
 
-  const { questionsWithAnswers, questionCurrentIndex } = stateQuiz;
+  const { questionsWithAnswers, questionCurrentIndex } = stateQuiz
 
   if (!Array.isArray(questionsWithAnswers) || questionsWithAnswers.length < 1)
-    return <QuizNotFound />;
+    return <QuizNotFound />
 
-  const currentQuestion = questionsWithAnswers[questionCurrentIndex];
+  const currentQuestion = questionsWithAnswers[questionCurrentIndex]
 
   const booleanButtonsSection = (
     <BooleanButtonsSection
@@ -22,15 +22,15 @@ export const QuizContent = (props = {}) => {
         setStateQuiz,
         questionCurrentIndex,
         questionsWithAnswers,
-        currentQuestion
+        currentQuestion,
       }}
     />
-  );
+  )
 
   const quizProgress = getQuizProgess(
     questionCurrentIndex,
     questionsWithAnswers
-  );
+  )
 
   return (
     <View style={globalStyles.quizContent}>
@@ -44,7 +44,7 @@ export const QuizContent = (props = {}) => {
           style={[
             globalStyles.textHeader,
             globalStyles.textQuestion,
-            { color: globalStyles.text2.color }
+            { color: globalStyles.text2.color },
           ]}
         >
           {currentQuestion.question}
@@ -55,5 +55,5 @@ export const QuizContent = (props = {}) => {
         {quizProgress}
       </Text>
     </View>
-  );
-};
+  )
+}

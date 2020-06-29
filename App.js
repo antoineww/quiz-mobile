@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import Routes from "./src/routes/index";
+import React, { Component } from "react"
+import { View, Text, TouchableOpacity } from "react-native"
+import Routes from "./src/routes/index"
 
-import { store } from "./src/redux";
-import { Provider } from "react-redux";
+import { store } from "./src/redux"
+import { Provider } from "react-redux"
 
 class App extends Component {
   render() {
@@ -11,8 +11,8 @@ class App extends Component {
       <Provider store={store}>
         <Routes />
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App

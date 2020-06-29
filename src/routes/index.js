@@ -1,38 +1,38 @@
-import React from "react";
-import { View } from "react-native";
+import React from "react"
+import { View } from "react-native"
 
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import actions from "./../redux/actions";
-import ScreenRouter from "./screenRouter";
-import globalStyles from "../globalStyles";
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+import actions from "./../redux/actions"
+import ScreenRouter from "./screenRouter"
+import globalStyles from "../globalStyles"
 
 const Routes = (props = {}) => {
   return (
     <View style={globalStyles.root}>
       <ScreenRouter {...props} />
     </View>
-  );
-};
+  )
+}
 
 export default connect(
-  state => {
+  (state) => {
     const {
       app: { questionsWithAnswers },
-      progress: { gettingQuestions }
-    } = state;
+      progress: { gettingQuestions },
+    } = state
 
     return {
       app: { questionsWithAnswers },
-      progress: { gettingQuestions }
-    };
+      progress: { gettingQuestions },
+    }
   },
-  dispatch => ({
+  (dispatch) => ({
     actionsGroup: bindActionCreators(
       {
-        getQuestionsAction: actions.getQuestionsAction
+        getQuestionsAction: actions.getQuestionsAction,
       },
       dispatch
-    )
+    ),
   })
-)(Routes);
+)(Routes)

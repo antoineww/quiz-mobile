@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import { View, Text, TouchableOpacity, Alert } from "react-native";
+import React, { useEffect } from "react"
+import { View, Text, TouchableOpacity, Alert } from "react-native"
 
-import strings from "./../../resources/strings";
+import strings from "./../../resources/strings"
 
-import { onQuestionAnswered } from "./helpers";
-import { quitQuiz } from "../../helpers/navigationHooks";
-import { QuizContent } from "./components";
-import globalStyles from "../../globalStyles";
+import { onQuestionAnswered } from "./helpers"
+import { quitQuiz } from "../../helpers/navigationHooks"
+import { QuizContent } from "./components"
+import globalStyles from "../../globalStyles"
 
 const Quiz = (props = {}) => {
-  const { stateQuiz, setStateQuiz } = props;
-  const { goToQuestion } = stateQuiz;
+  const { stateQuiz, setStateQuiz } = props
+  const { goToQuestion } = stateQuiz
 
   /* eslint-disable react-hooks/exhaustive-deps */
-  useEffect(() => onQuestionAnswered(stateQuiz, setStateQuiz), [goToQuestion]);
+  useEffect(() => onQuestionAnswered(stateQuiz, setStateQuiz), [goToQuestion])
   /* eslint-enable */
 
   const onQuit = () =>
@@ -22,10 +22,10 @@ const Quiz = (props = {}) => {
       "Do you want to quit doing the quiz?",
       [
         { text: "YES", onPress: () => quitQuiz(stateQuiz, setStateQuiz) },
-        { text: "NO", onPress: () => {} }
+        { text: "NO", onPress: () => {} },
       ],
       { cancelable: false }
-    );
+    )
 
   return (
     <View style={[globalStyles.container, globalStyles.quiz]}>
@@ -37,14 +37,14 @@ const Quiz = (props = {}) => {
             globalStyles.btnExit,
             ,
             globalStyles.btnSlim,
-            { borderWidth: 0 }
+            { borderWidth: 0 },
           ]}
           onPress={onQuit}
         >
           <Text
             style={[
               globalStyles.textBtnExit,
-              { fontSize: globalStyles.text.fontSize }
+              { fontSize: globalStyles.text.fontSize },
             ]}
           >
             {strings.quiz_quit}
@@ -52,7 +52,7 @@ const Quiz = (props = {}) => {
         </TouchableOpacity>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Quiz;
+export default Quiz

@@ -1,21 +1,21 @@
-import { createStore, applyMiddleware, combineReducers, compose } from "redux";
-import { createLogger } from "redux-logger";
-import promise from "redux-promise";
-import thunk from "redux-thunk";
+import { createStore, applyMiddleware, combineReducers, compose } from "redux"
+import { createLogger } from "redux-logger"
+import promise from "redux-promise"
+import thunk from "redux-thunk"
 
-import progress from "./progress";
-import app from "./app";
+import progress from "./progress"
+import app from "./app"
 
 const root = combineReducers({
   progress,
-  app
-});
+  app,
+})
 
 // TODO: For debugging purposes
-const enabled = false;
+const enabled = false
 const logger = createLogger({
-  predicate: (getState, action) => enabled
-});
+  predicate: (getState, action) => enabled,
+})
 
 const composed = compose(
   applyMiddleware(
@@ -23,8 +23,8 @@ const composed = compose(
     thunk,
     logger // TODO: For debugging purposes
   )
-);
+)
 
-const store = createStore(root, composed);
+const store = createStore(root, composed)
 
-export default store;
+export default store

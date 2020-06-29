@@ -1,6 +1,6 @@
-import colorScheme from "./colorScheme";
-import { Dimensions } from "react-native";
-const { height, width } = Dimensions.get("window"); // Only use here in a fixed Orientation
+import colorScheme from "./colorScheme"
+import { Dimensions } from "react-native"
+const { height, width } = Dimensions.get("window") // Only use here in a fixed Orientation
 
 const btn = {
   flexDirection: "row",
@@ -15,8 +15,8 @@ const btn = {
   paddingRight: Math.round(width * 0.05),
 
   backgroundColor: colorScheme.buttonPrimary,
-  borderRadius: 300
-};
+  borderRadius: 300,
+}
 
 const answerButton = {
   borderRadius: 5,
@@ -24,8 +24,8 @@ const answerButton = {
   paddingTop: Math.round(height * 0.05),
   paddingBottom: Math.round(height * 0.05),
   paddingLeft: Math.round(width * 0.1),
-  paddingRight: Math.round(width * 0.1)
-};
+  paddingRight: Math.round(width * 0.1),
+}
 
 export const btnStyles = {
   btn,
@@ -34,31 +34,31 @@ export const btnStyles = {
     ...btn,
     borderWidth: 1,
     borderColor: colorScheme.buttonPrimary,
-    backgroundColor: colorScheme.primary
+    backgroundColor: colorScheme.primary,
   },
 
   btnTrue: {
     ...btn,
     ...answerButton,
-    backgroundColor: colorScheme.buttonTrue
+    backgroundColor: colorScheme.buttonTrue,
   },
 
   btnFalse: {
     ...btn,
     ...answerButton,
-    backgroundColor: colorScheme.buttonFalse
+    backgroundColor: colorScheme.buttonFalse,
   },
 
   btnExit: {
     ...btn,
     borderWidth: 1,
     borderColor: colorScheme.buttonPrimary,
-    backgroundColor: colorScheme.primary
+    backgroundColor: colorScheme.primary,
   },
   btnSlim: {
     paddingTop: 5,
-    paddingBottom: 5
-  }
-};
+    paddingBottom: 5,
+  },
+}
 
-export default btnStyles;
+export default btnStyles

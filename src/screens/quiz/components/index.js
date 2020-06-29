@@ -1,3 +1,3 @@
-export * from "./booleanButtonsSection";
-export * from "./quizContent";
-export * from "./quizNotFound";
+export * from "./booleanButtonsSection"
+export * from "./quizContent"
+export * from "./quizNotFound"
