@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome5"
 
 import { getQuizScore } from "./../helpers/common"
 import { beginQuiz, exitQuiz } from "../helpers/navigationHooks"
-import globalStyles, { colorScheme } from "../globalStyles"
+import globalStyles from "../globalStyles"
 
 const getScoreSymbol = (is_correct) => {
   switch (is_correct) {

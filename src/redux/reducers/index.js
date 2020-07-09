@@ -14,7 +14,7 @@ const root = combineReducers({
 // TODO: For debugging purposes
 const enabled = false
 const logger = createLogger({
-  predicate: (getState, action) => enabled,
+  predicate: () => enabled,
 })
 
 const composed = compose(
