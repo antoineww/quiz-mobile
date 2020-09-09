@@ -40,20 +40,20 @@ yarn ios
 
 #
 
-[play_game]: demo\quiz1_play_game.gif "Play the Quiz & Try again the same Quiz"
-[quit_again]: demo\quiz2_quit_again.gif "Quit Quiz"
-[quit_play_again]: demo\quiz3_quit_play_again.gif "Quit & Play again a new Quiz"
+[play_game]: https://github.com/antoineww/quiz-mobile/blob/master/demo/quiz1_play_game.gif "Play the Quiz & Try again the same Quiz"
+[quit_game]: https://github.com/antoineww/quiz-mobile/blob/master/demo/quiz2_quit_again.gif "Quit Quiz"
+[quit_play_again]: https://github.com/antoineww/quiz-mobile/blob/master/demo/quiz3_quit_play_again.gif "Quit & Play again a new Quiz"
 
 1. Play the Quiz & Try again the same Quiz
 
-   ![alt text][play_game]
+   ![play_game][play_game]
 
 2. Quit Quiz
 
-   ![alt text][quit_again]
+   ![quit_game][quit_game]
 
 3. Quit & Play again a new Quiz
 
-   ![alt text][quit_play_again]
+   ![quit_play_again][quit_play_again]
 
 #
