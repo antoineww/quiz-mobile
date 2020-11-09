@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 
 import { QUIZ_STAGES, DEFAULT_STATE_QUIZ } from "./../resources/constants"
-import Home from "./../screens/home"
-import Quiz from "./../screens/quiz"
-import Results from "./../screens/results"
+import Home from "../screens/home"
+import Quiz from "../screens/quiz"
+import Results from "../screens/results"
 import {
   canPrepareQuestionsForNewQuiz,
   canSupplyFreshQuestions,

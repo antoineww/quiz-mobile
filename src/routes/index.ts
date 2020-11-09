@@ -3,7 +3,7 @@ import { View } from "react-native"
 
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
-import actions from "./../redux/actions"
+import actions from "../redux/actions"
 import ScreenRouter from "./screenRouter"
 import globalStyles from "../globalStyles"
 

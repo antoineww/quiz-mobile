@@ -1,5 +1,5 @@
-import { makeAQuizQuestion } from "./../../helpers/common"
-import constants from "./../constants"
+import { makeAQuizQuestion } from "../../helpers/common"
+import constants from "../constants"
 
 export const initialState = {
   questionsWithAnswers: [],

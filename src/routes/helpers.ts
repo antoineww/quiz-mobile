@@ -1,4 +1,4 @@
-import { beginQuiz } from "./../helpers/navigationHooks"
+import { beginQuiz } from "../helpers/navigationHooks"
 
 export const canPrepareQuestionsForNewQuiz = (
   stateQuiz,

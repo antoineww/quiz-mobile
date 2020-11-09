@@ -1,5 +1,5 @@
-import { getQuestions } from "./../../data/api"
-import constants from "./../constants"
+import { getQuestions } from "../../data/api"
+import constants from "../constants"
 
 export const getQuestionsAction = (params = {}) => {
   return async (dispatch, getState) => {
