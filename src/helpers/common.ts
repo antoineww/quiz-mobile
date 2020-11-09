@@ -1,6 +1,6 @@
 // @ts-ignore
 import { XmlEntities } from "html-entities"
-import { DEFAULT_QUESTION, QuestionFormat } from "./../resources/constants"
+import { DEFAULT_QUESTION, QuestionFormat } from "../constants/constants
 
 export const getQuizProgess = (
   questionCurrentIndex = -1,
