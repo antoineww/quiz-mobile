@@ -1,12 +1,12 @@
 import React, { useEffect } from "react"
 import { View, Text, TouchableOpacity, Alert } from "react-native"
 
-import strings from "./../../resources/strings"
+import strings from "./../../constants/strings"
 
 import { onQuestionAnswered } from "./helpers"
 import { quitQuiz } from "../../helpers/navigationHooks"
 import { QuizContent } from "./components"
-import globalStyles from "../../globalStyles"
+import globalStyles from "../../constants/globalStyles"
 
 const Quiz = (props = {}) => {
   const { stateQuiz, setStateQuiz } = props

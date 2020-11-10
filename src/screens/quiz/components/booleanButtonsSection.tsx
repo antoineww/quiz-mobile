@@ -1,9 +1,9 @@
 import React from "react"
 import { View, Text, TouchableOpacity } from "react-native"
-import strings from "./../../../resources/strings"
-import { ANSWER_TYPES } from "./../../../resources/constants"
-import { applyAnswer } from "./../helpers"
-import globalStyles from "../../../globalStyles"
+import strings from "./../../../constants/strings"
+import { ANSWER_TYPES } from "./../../../constants/constants"
+import { applyAnswer } from "../helpers"
+import globalStyles from "../../../constants/globalStyles"
 
 export const BooleanButtonsSection = ({
   stateQuiz,

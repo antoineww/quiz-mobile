@@ -3,7 +3,7 @@ import { View, Text } from "react-native"
 import { getQuizProgess } from "../../../helpers/common"
 import { BooleanButtonsSection } from "./booleanButtonsSection"
 import { QuizNotFound } from "./quizNotFound"
-import globalStyles from "../../../globalStyles"
+import globalStyles from "../../../constants/globalStyles"
 
 export const QuizContent = (props = {}) => {
   const { stateQuiz, setStateQuiz } = props

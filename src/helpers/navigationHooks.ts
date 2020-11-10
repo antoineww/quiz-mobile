@@ -1,4 +1,4 @@
-import { QUIZ_STAGES, DEFAULT_STATE_QUIZ } from "../resources/constants"
+import { QUIZ_STAGES, DEFAULT_STATE_QUIZ } from "../constants/constants"
 
 // USES React Hook values
 

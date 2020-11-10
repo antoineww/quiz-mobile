@@ -1,8 +1,8 @@
 import React from "react"
 import { View, Text, TouchableOpacity } from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome5"
-import strings from "./../../../resources/strings"
-import globalStyles from "../../../globalStyles"
+import { FontAwesome5 as Icon } from "@expo/vector-icons"
+import strings from "./../../../constants/strings"
+import globalStyles from "../../../constants/globalStyles"
 
 export const QuizNotFound = () => (
   <View style={globalStyles.quizNotFound}>

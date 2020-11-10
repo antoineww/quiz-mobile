@@ -1,10 +1,10 @@
 import React from "react"
 import { View, Text, TouchableOpacity } from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome5"
+import { FontAwesome5 as Icon } from "@expo/vector-icons"
 import * as Animatable from "react-native-animatable"
-import strings from "./../resources/strings"
+import strings from "./../constants/strings"
 import { loadQuiz } from "../helpers/navigationHooks"
-import globalStyles from "../globalStyles"
+import globalStyles from "../constants/globalStyles"
 
 export const LoaderIcon = (props = {}) => {
   const { style, ...restOfProps } = props

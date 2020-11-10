@@ -11,6 +11,7 @@ import NotFoundScreen from "../screens/NotFoundScreen"
 import { RootStackParamList } from "../../types"
 import BottomTabNavigator from "./BottomTabNavigator"
 import LinkingConfiguration from "./LinkingConfiguration"
+import Routes from "../routes/index"
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -36,7 +37,7 @@ const Stack = createStackNavigator<RootStackParamList>()
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Root" component={Routes} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}

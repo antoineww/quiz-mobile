@@ -1,4 +1,4 @@
-import { QUIZ_STAGES } from "./../../resources/constants"
+import { QUIZ_STAGES } from "./../../constants/constants"
 
 export const areStringsEqual = (
   answerA = "A",

@@ -1,11 +1,11 @@
 import React from "react"
 import { View, FlatList, Text, TouchableOpacity } from "react-native"
-import strings from "./../resources/strings"
-import Icon from "react-native-vector-icons/FontAwesome5"
+import strings from "./../constants/strings"
+import { FontAwesome5 as Icon } from "@expo/vector-icons"
 
-import { getQuizScore } from "./../helpers/common"
+import { getQuizScore } from "../helpers/common"
 import { beginQuiz, exitQuiz } from "../helpers/navigationHooks"
-import globalStyles from "../globalStyles"
+import globalStyles from "../constants/globalStyles"
 
 const getScoreSymbol = (is_correct) => {
   switch (is_correct) {
