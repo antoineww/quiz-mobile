@@ -140,7 +140,7 @@ export const styles = {
     paddingTop: Math.round(height * 0.02),
   },
   resultsPieChart: {
-    width,
+    width: width,
     height: Math.round(height * 0.2),
   },
 }

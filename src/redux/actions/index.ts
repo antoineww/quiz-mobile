@@ -2,7 +2,7 @@ import { getQuestions } from "../../data/api"
 import mock_questions from "../../data/mock_questions.json"
 import constants from "../constants"
 
-const DEBUG = true
+const DEBUG = false
 
 export const getQuestionsAction = (params = {}) => {
   return async (dispatch, getState) => {
