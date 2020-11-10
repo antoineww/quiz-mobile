@@ -131,13 +131,17 @@ export const styles = {
     color: colorScheme.buttonFalse,
   },
   resultItems: {
-    minHeight: Math.round(height * 0.76),
-    maxHeight: Math.round(height * 0.76),
+    minHeight: Math.round(height * 0.55),
+    maxHeight: Math.round(height * 0.55),
   },
   resultFooter: {
     flexDirection: "row",
     justifyContent: "space-around",
     paddingTop: Math.round(height * 0.02),
+  },
+  resultsPieChart: {
+    width,
+    height: Math.round(height * 0.2),
   },
 }
 
