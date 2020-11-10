@@ -1,3 +1,9 @@
+export const QUIZ_STAGES = {
+  HOME: "HOME",
+  IN_QUIZ: "IN_QUIZ",
+  RESULTS: "RESULTS",
+}
+
 // TYPES & INTERFACES
 export type QUIZ_STAGE = "HOME" | "IN_QUIZ" | "RESULTS"
 export type TYPE_ANSWER = "True" | "False"

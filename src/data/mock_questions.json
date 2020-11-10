@@ -1,6 +1,8 @@
 {
   "response_code": 0,
-  "results": [
+  "status":222,
+  "data": {
+    "results": [
     {
       "category": "History",
       "type": "boolean",
@@ -81,5 +83,6 @@
       "correct_answer": "False",
       "incorrect_answers": ["True"]
     }
-  ]
+    ]
+  }
 }

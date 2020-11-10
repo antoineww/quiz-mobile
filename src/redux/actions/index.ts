@@ -1,5 +1,8 @@
 import { getQuestions } from "../../data/api"
+import mock_questions from "../../data/mock_questions.json"
 import constants from "../constants"
+
+const DEBUG = true
 
 export const getQuestionsAction = (params = {}) => {
   return async (dispatch, getState) => {
@@ -14,7 +17,11 @@ export const getQuestionsAction = (params = {}) => {
 
     try {
       const { cb } = params
-      const response = await getQuestions()
+      let response = null
+
+      if (DEBUG) response = mock_questions
+      else response = await getQuestions()
+
       const { data, status } = response
       if (status) {
         const { results: questions } = data
